@@ -38,9 +38,30 @@ def string_practise():
     # format method
 
 
+def boolean_practise():
+    my_number = 5
+    user_number = int(input("Enter a number: "))
+
+    print(my_number == user_number, end=" ")
+
+    ## and or enviornment
+    x = True
+    cmp = x and 18
+    print(cmp)
+    ## case 2
+    age = int(input("Enter your age: "))
+    side_job = True
+    print(age > 18 and age < 65 or side_job)
+
+
+    return 
+
+
+
+
 ### starter function
 def main():
-    string_practise()
+    boolean_practise()
 
 
 if __name__ == "__main__":
