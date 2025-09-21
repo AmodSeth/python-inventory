@@ -1,0 +1,72 @@
+[
+    {
+        "q1": {
+            "question": "Which superhero fought against Thanos for the first time after Ragnarok?",
+            "options": ["Thor", "Loki", "Doctor Strange", "Captain America"],
+            "answer": "Thor"
+        }
+    },
+    {
+        "q2": {
+            "question": "What is the name of Tony Stark’s AI assistant after J.A.R.V.I.S.?",
+            "options": ["Ultron", "Friday", "Vision", "Karen"],
+            "answer": "Friday"
+        }
+    },
+    {
+        "q3": {
+            "question": "What metal is Captain America’s shield made of?",
+            "options": ["Vibranium", "Adamantium", "Titanium", "Steel"],
+            "answer": "Vibranium"
+        }
+    },
+    {
+        "q4": {
+            "question": "Who was the villain in the first Avengers movie?",
+            "options": ["Thanos", "Loki", "Red Skull", "Ultron"],
+            "answer": "Loki"
+        }
+    },
+    {
+        "q5": {
+            "question": "Which character lifted Thor’s hammer in Avengers: Endgame?",
+            "options": ["Hulk", "Iron Man", "Captain America", "Black Panther"],
+            "answer": "Captain America"
+        }
+    },
+    {
+        "q6": {
+            "question": "What is the real name of the Black Panther?",
+            "options": ["M’Baku", "T’Chaka", "T’Challa", "N’Jadaka"],
+            "answer": "T’Challa"
+        }
+    },
+    {
+        "q7": {
+            "question": "Who destroyed Tony Stark’s home in Iron Man 3?",
+            "options": ["Mandarin", "Whiplash", "Ultron", "Thanos"],
+            "answer": "Mandarin"
+        }
+    },
+    {
+        "q8": {
+            "question": "What species is Loki revealed to be?",
+            "options": ["Asgardian", "Frost Giant", "Dark Elf", "Human"],
+            "answer": "Frost Giant"
+        }
+    },
+    {
+        "q9": {
+            "question": "Who was the first Avenger to meet Nick Fury?",
+            "options": ["Captain America", "Iron Man", "Hawkeye", "Captain Marvel"],
+            "answer": "Captain Marvel"
+        }
+    },
+    {
+        "q10": {
+            "question": "What is the name of Thor’s axe introduced in Avengers: Infinity War?",
+            "options": ["Stormbreaker", "Mjolnir", "Godslayer", "Dragonfang"],
+            "answer": "Stormbreaker"
+        }
+    }
+]
