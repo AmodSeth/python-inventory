@@ -36,3 +36,6 @@ Books = {
 [] Delete --> Delete
 
 ### query parameter
+
+##pydantic
+it is used for data handeling, data validation
