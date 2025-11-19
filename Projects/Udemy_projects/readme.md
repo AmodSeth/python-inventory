@@ -13,6 +13,7 @@ pip list # to check the installed packages
 ``` bash
 pip install fastapi
 pip install "uvicorn[standard]"
+
 ```
 
 ### to start the server
