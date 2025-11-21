@@ -1,0 +1,23 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE todos (
+	id INTEGER NOT NULL, 
+	title VARCHAR, 
+	desciption VARCHAR, 
+	priority INTEGER, 
+	is_complete BOOLEAN, 
+	date_created VARCHAR, 
+	PRIMARY KEY (id)
+);
+INSERT INTO todos VALUES(1,'Buy groceries','Buy rice, dal, and vegetables',2,0,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(2,'Finish assignment','Complete database homework',3,0,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(3,'Workout','45 minutes gym and stretching',1,1,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(4,'Pay bills','Electricity and internet bills',2,0,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(5,'Call mom','Weekly check-in call',1,1,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(6,'Read book','Read 20 pages of a novel',3,0,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(7,'Clean room','Organize table and wardrobe',2,0,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(8,'Learn SQL','Practice joins and constraints',3,0,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(9,'Plan trip','Check flights and stay options',1,0,'2025-11-16 10:19:24');
+INSERT INTO todos VALUES(10,'Backup files','Backup project files to drive',2,1,'2025-11-16 10:19:24');
+CREATE INDEX ix_todos_id ON todos (id);
+COMMIT;
