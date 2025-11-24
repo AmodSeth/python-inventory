@@ -68,26 +68,57 @@ async def create_todo(db: depends_db, todo_request: TodoCreateModel):
 
 
 
-@app.post("/todos/bulk_upload", status_code=201)
-async def create_bulk_todo(file: UploadFile  , db: depends_db ):
-    n
-
-    # """
-    #     Accepts a CSV file with columns: title, description, priority, is_complete, date_created
-    # """
-    # if not file.filename:
-    #     raise HTTPException(status_code=400, detail="No file uploaded")
-    # if not (file.filename.endswith('.csv')):
-    #     raise HTTPException(status_code=400, detail="Invalid file format. Please upload a CSV file.")
-
-    
+# @app.post("/todos/bulk_upload", status_code=201)
+# async def create_bulk_todo(file: UploadFile  , db: depends_db ):
+#     pass
+#     # """
+#     #     Accepts a CSV file with columns: title, description, priority, is_complete, date_created
+#     # """
+#     # if not file.filename:
+#     #     raise HTTPException(status_code=400, detail="No file uploaded")
+#     # if not (file.filename.endswith('.csv')):
+#     #     raise HTTPException(status_code=400, detail="Invalid file format. Please upload a CSV file.")
 
     
+
     
+    
+@app.put("/todo/{todo_id}", status_code=200)
+async def update_todo(db: depends_db, todo_request: TodoCreateModel, todo_id: int):
+    try:
+        #get ht todo from the database
+        todo_model = db.query(models.Todos).filter(models.Todos.id == todo_id).first()
+        if todo_model is None:
+            raise HTTPException(status_code=404, detail="Todo not found")
+
+        #update the todo values
+        todo_model.title = todo_request.title
+        todo_model.description = todo_request.description
+        todo_model.priority = todo_request.priority
+        todo_model.is_complete = todo_request.is_complete
+        todo_model.date_created = todo_request.date_created
+        db.commit()
+        return {"message": "Todo updated successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Database error occurred")
 
 
+@app.delete("/todo/{todo_id}", status_code=200)
+async def delete_todo(db: depends_db, todo_request: TodoCreateModel, todo_id: int = Path(gt = 0)):
+    try:
+        # find the todo in the database
+        todo_model = db.query(models.Todos).filter(models.Todos.id == todo_id).first()
+        if todo_model is None:
+            raise HTTPException(status_code=404, detail="Todo not found")
+        db.delete(todo_model)
+        db.commit()
+        return {"message": "Todo deleted successfully"}
 
-
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Database error occurred in delete request")
+    
+    
+    
 
 
 
