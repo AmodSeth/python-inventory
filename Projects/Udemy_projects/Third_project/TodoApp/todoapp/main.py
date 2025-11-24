@@ -5,11 +5,16 @@ from sqlalchemy.orm import Session
 from pydantic_base_model import TodoCreateModel
 
 from Database import engine,session_maker
+from routers import auth
 
 app = FastAPI()
 
 # this will only run if todos.db exist so when we add something into db 
 models.Base.metadata.create_all(bind=engine)
+
+#include that router
+app.include_router(auth.router)
+
 
 #uvicorn main:app --reload
 
