@@ -1,0 +1,31 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowListSpecificBuckets",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::jio-credit-uat-foundation",
+        "arn:aws:s3:::jio-credit-uat-lms",
+        "arn:aws:s3:::jio-credit-uat-group"
+      ]
+    },
+    {
+      "Sid": "AllowObjectOperationsSpecificBuckets",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::jio-credit-uat-foundation/*",
+        "arn:aws:s3:::jio-credit-uat-lms/*",
+        "arn:aws:s3:::jio-credit-uat-group/*"
+      ]
+    }
+  ]
+}
