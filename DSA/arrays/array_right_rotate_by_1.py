@@ -13,4 +13,4 @@ def using_list_slicing():
 if __name__ == "__main__":
     print(using_list_slicing())
 
-     
+    
